@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Defensores Marinos</title>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+    
+       <link rel="icon" href="./img/logo-da.png">  
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/inicio.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+
+<body>
+    <!--FUNCION DE INICIACION PARA LOS POPOVERS-->
+    <script> 
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Defensores<b>Marinos</b></h1>
+
+            
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li class="menu-selected"><a href="blog.html" class="text-menu-selected">
+                            <i class="fas fa-file-alt"></i>Blog</a></li>
+                        <li><a href="galeria.html"> <i class="fa-solid fa-photo-film"></i>Galería</a></li>                        
+                        <li><a href="donaciones.html"> <i class="fa-solid fa-handshake-angle"></i></i>Donaciones</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div id="ctn-icon-search">  
+                <i class="fas fa-search" id="icon-search"></i>  <!--Se agrega un icono de busqueda desde Font Awesome-->
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>  <!--Se agrega un contenedor que incluirá la barra de busqueda-->
+        </div>
+    </header>
+
+
+    <div id="ctn-bars-search">
+        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+    </div>
+
+    <ul id="box-search">
+        <li><a href="#Acerca de Nosotros"><i class="fas fa-search"></i>Acerca de Nosotros</a></li>
+        <li><a href="#Misión"><i class="fas fa-search"></i>Misión</a></li>
+        <li><a href="#Visión"><i class="fas fa-search"></i>Visión</a></li>
+        <li><a href="#Delfin"><i class="fas fa-search"></i>Delfin</a></li>
+        <li><a href="#Vaquita"><i class="fas fa-search"></i>Vaquita</a></li>
+        <li><a href="galeria.html"><i class="fas fa-search"></i>Galería</a></li>
+        <li><a href="blog.html"><i class="fas fa-search"></i>Blog</a></li>
+    </ul>
+
+    <div id="cover-ctn-search"></div>
+
+
+    <!--Portada-->
+
+    <div class="container-all" id="move-content">
+
+        <div class="container-content">
+            <video src="img/VideoDelfin.mp4" 
+            autoplay="true" muted="true" loop="true"></video>
+        </div>
+
+    <div class="container-content">
+
+        <article>
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Opciones
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#NEWS">NOTICIAS</a>
+                  <a class="dropdown-item" href="#QEP">¿Sabías que..</a>
+                  <a class="dropdown-item" href="#Interesante">¿Quieres ver algo interesante?</a>
+                </div>
+              </div>
+            <br> 
+            <h2><a id="NEWS">NOTICIAS</a></h2>
+            <hr>
+                <p>Hoy, día 8 de junio, se celebra el Día Mundial de los Océanos. Ellos son los pulmones de nuestro planeta ya que cubren más de un 70% del territorio y tal y como afirma Naciones Unidas produce al menos el 50% del oxígeno del planeta, albergando la mayor parte de la biodiversidad de la tierra. 
+                    Por desgracia, hasta un 90% de las grandes especies marítimas de peces se están viendo mermadas y casi el 50% de los arrecifes están siendo destruidos: "Debemos trabajar juntos para crear un nuevo equilibrio en el que no agotemos todo lo que este nos ofrece, sino que restauremos su vitalidad y le devolvamos una nueva vida", aseguran desde Naciones Unidas.
+                    La cantidad de plásticos vertidos al mar y el mal uso del océano por parte del hombre está provocando que cientos de especies marinas se encuentren en peligro de extinción. Hoy, en Mascotíssimas, os enseñamos unas cuantas.</p>
+
+                <img src="img/diaoceano.jpg" alt="">
+
+            <br>   
+            <br> 
+            <h2><a id="QEP">¿Sabías que..</a></h2>
+            <hr>
+            <p>Sabías quen existe un santuario del Manatí. La relevancia que tiene el Santuario del Manatí, en el estado de Quintana Roo, 
+                se relaciona con el hecho de que sirve de hábitat para varias especies en peligro, además del manatí. Sin embargo, las otras 
+                especies también son relevantes para el equilibrio de los ecosistemas de la región. Los visitantes de este santuario de protección 
+                animal quintanarroense, podrán observar más de 300 variedades de plantas y flores en la selva mediana y la selva baja, manglares, petenes, 
+                humedales, lagunas, aguadas y potreros de la zona. Es el hogar también de animales como el jaguar, tigrillo, jabalí, pavo de monte, 
+                tucán y cocodrilo.</p>
+            <br>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.421508170468!2d-88.26554768510472!3d18.68993788731064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5baebd012e6dab%3A0x8cfd2bbcd71711c!2sSantuario%20del%20Manat%C3%AD!5e0!3m2!1ses-419!2smx!4v1654745506568!5m2!1ses-419!2smx" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <br>            
+            <h2><a id="Interesante">¿Quieres ver algo interesante?</a></h2>
+            <hr>
+                <p>Las ballenas son los mamíferos acuáticos más grandes, esto maravillosos animales se encuentran en la mayoría de los océanos del 
+                    mundo y hay una gran variedad de especies de ella. Estos cetáceos son de sangre caliente y cuentan con una capa de grasa considerable 
+                    que sirve como aislamiento térmico del frío de los océanos. Para entender mejor el cuerpo de las ballenas por lo general se usa el esquema
+                     de la ballena.</p>
+
+                     <img img class="zoom" src="img/esquemaba.jpg"/>
+            <br>
+                    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" 
+                    data-content="And here's some amazing content. It's very engaging. Right?">Da click para un consejo</button>
+  
+            <br>
+
+        </article>
+
+        <div class="container-aside">	
+
+            <aside>
+            <!--Formulario de contacto-->
+            <form>
+                <img img class="zoom" src="img/logo-da.png"/>
+                <h2>Forma parte de los Defensores Marinos</h2>
+                <p>Solamente necesitas introducir tus datos en el siguiente formulario y nos pondremos 
+                    en contacto contigo
+                </p>
+                <form class="formulario" action="#" method="POST">
+    
+                    <div class="contenedor-campos">
+                        <div class="campo w-100">
+                            <label>    Nombre</label>
+                            <input class="border" type="text" name="nombre" placeholder="Nombre" required>
+                        </div>
+    
+                        <div class="campo w-100">
+                            <label>    Teléfono</label>
+                            <input class="border" type="tel" name="telefono" placeholder="Teléfono">
+                        </div>
+    
+                        <div class="campo w-100">
+                            <label>    Correo</label>
+                            <input class="border" type="mail" name="correo" placeholder="Mail">
+                        </div>
+    
+                        <div class="campo w-100">
+                            <label>    Mensaje:</label>
+                            <textarea class="border" name="mensaje"></textarea>
+                        </div>
+                    </div>              
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Agrega tu fotografía en esta sección</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>   
+                    <div class="enviar">
+                        <input class="boton" type="submit" value="Enviar">
+                    </div>
+                </form>
+            </aside>
+
+            <aside>
+                <h2>Defensores Marinos de la Semana</h2>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">User</th>
+                        <th scope="col">Shares</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Catherin</td>      
+                        <td>@catsiboo</td> 
+                        <td>25</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Otto</td>    
+                        <td>@otomani</td>
+                        <td>23</td>                      
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Dustin</td>    
+                        <td>@duster</td>                       
+                        <td>25</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </aside>
+
+
+
+        </div>
+    </div>
+        <!--Bootstrap Template-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+    <div class="container-footer">	
+
+        <footer>
+
+			<address>
+				<strong>Defensores Marinos</strong><br>
+				Av Instituto Politécnico Nacional 2580, La Laguna Ticoman, Gustavo A. Madero, 07340 Ciudad de México, CDMX<br>
+				Telefono: 55 2847 4323
+                <p></p>
+                <p></p>
+			</address>
+
+
+            <div class="logo-footer">
+                <img src="img/logo-da.png" alt="">
+            </div>
+
+            <div class="redes-footer">
+                <a href="https://www.facebook.com/WWF"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g icon-redes-footer"></i></a>
+                <a href="https://www.instagram.com/wwf_mexico/?hl=es"><i class="fab fa-instagram icon-redes-footer"></i></a>
+            </div>
+
+            <hr>
+
+
+        </footer>
+
+    </div>
+
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

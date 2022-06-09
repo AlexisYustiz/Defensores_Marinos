@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Defensores Marinos</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+            <link rel="icon" href="./img/logo-da.png">
+            <link rel="stylesheet" href="css/principal.css">
+            <link rel="stylesheet" href="css/galeria.css">    
+    <script src="https://kit.fontawesome.com/8aa383a719.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Defensores<b>Marinos</b></h1>
+
+            
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="blog.html"><i class="fas fa-file-alt"></i>Blog</a></li>
+                        <li class="menu-selected"><a href="galeria.html"   class="text-menu-selected">
+                            <i class="fa-solid fa-photo-film"></i>Galería</a></li>                        
+                        <li><a href="donaciones.html"> <i class="fa-solid fa-handshake-angle"></i></i>Donaciones</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div id="ctn-icon-search">  
+                <i class="fas fa-search" id="icon-search"></i>  <!--Se agrega un icono de busqueda desde Font Awesome-->
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>  <!--Se agrega un contenedor que incluirá la barra de busqueda-->
+        </div>
+    </header>
+
+
+    <div id="ctn-bars-search">
+        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+    </div>
+
+    <ul id="box-search">
+        <li><a href="#Acerca de Nosotros"><i class="fas fa-search"></i>Acerca de Nosotros</a></li>
+        <li><a href="#Misión"><i class="fas fa-search"></i>Misión</a></li>
+        <li><a href="#Visión"><i class="fas fa-search"></i>Visión</a></li>
+        <li><a href="#Delfin"><i class="fas fa-search"></i>Delfin</a></li>
+        <li><a href="#Vaquita"><i class="fas fa-search"></i>Vaquita</a></li>
+        <li><a href="#galeria"><i class="fas fa-search"></i>Galería</a></li>
+        <li><a href="blog.html"><i class="fas fa-search"></i>Blog</a></li>
+    </ul>
+
+    <div id="cover-ctn-search"></div>
+
+        <!--Carousel-->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/galeria1.jpg" class="d-block w-100" alt="g1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/galeria4.jpg" class="d-block w-100" alt="g2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/galeria3.jpg" class="d-block w-100" alt="g3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    <div class="container-content">
+        <article>
+            <section id="galeria" class="container">
+                <div>
+                    <h2><b><a id="Galeria">Animales Marinos en peligro de extinción</a></b></h2>
+                    <p>
+                        Existen muchos animales marinos en peligro de extinción. El medio marino es muy poco conocido, 
+                        pero comporta el 71% de la superficie del planeta, y es donde más especies animales existen 
+                        (existen muchas que no conocemos aún).
+                    </p>
+                </div>
+
+                    <!--Bootstrap Alerts-->
+                    <div class="alert alert-warning" role="alert">
+                        <i class="fas fa-info-circle"></i> Pulse el botón para mostrar u ocultar la galeria deseada.
+                    </div>
+
+                <!--Bootstrop Collapse-->
+                <div>
+                    <button type="button" class="btn btn-primary" onclick="move()" data-bs-target="#ballena"
+                        data-bs-toggle="collapse" aria-controls="collapse2" aria-expanded="false">Ballena Azul</button>
+                    <button type="button" class="btn btn-primary" onclick="move()" data-bs-target="#tiburon"
+                        data-bs-toggle="collapse" aria-controls="collapse2" aria-expanded="false">Tiburon Blanco</button>
+                    <button type="button" class="btn btn-primary" onclick="move()" data-bs-target="#delfin"
+                        data-bs-toggle="collapse" aria-controls="collapse2" aria-expanded="false">Delfín del río Irrawaddy</button>
+                    <button type="button" class="btn btn-primary" onclick="move()" data-bs-target="#pulpo"
+                        data-bs-toggle="collapse" aria-controls="collapse2" aria-expanded="false">Pulpo Paraguas</button>                    
+                </div>
+
+                <!--Barra de progreso-->
+                <div class="#ctn-bars-search input">
+                    <div class="progress margin-t-b">
+                        <div id="myBar" class="progress-bar bg-blue" style="width:0%;" value=0> </div>
+                    </div>
+                </div>
+                    <p>
+                        Aquí puedes ver las especies de animales acuáticos en peligro de extinción más importantes y destacadas:
+                    </p>
+                
+                <h3>Ballena Azul</h3>
+                <div class="collapse" id="ballena">
+                    <!--Bootstrp Galery-->
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <img src="img/ballena1.jpg" alt="ballena1" />
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <img src="img/ballena2.jpg" alt="ballena2" />
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <img src="img/ballena3.jpg" alt="ballena3" />
+                        </div>
+                    </div>
+                </div>
+                <h3>Tiburon Blanco</h3>
+                <div class="collapse" id="tiburon">
+                    <!--Bootstrp Galery-->
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <img src="img/tiburon1.jpg" alt="tiburon1" />
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <img src="img/tiburon2.jpg" alt="tiburon2" />
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <img src="img/tiburon3.jpg" alt="tiburon3" />
+                        </div>
+                    </div>
+                </div>
+                <h3>Delfín del río Irrawaddy</h3>
+                <div class="collapse" id="delfin">
+                    <!--Bootstrp Galery-->
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <img src="img/irrawaddy1.jpg" alt="irrawaddy1" />
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <img src="img/irrawaddy2.jpg" alt="irrawaddy2" />
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <img src="img/irrawaddy3.jpg" alt="irrawaddy3" />
+                        </div>
+                    </div>
+                </div>
+                <h3>Pulpo Paraguas</h3>
+                <div class="collapse" id="pulpo">
+                    <!--Bootstrp Galery-->
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <img src="img/pulpo1.jpg" alt="pulpo1" />
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <img src="img/pulpo2.jpg" alt="pulpo2" />
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <img src="img/pulpo3.jpg" alt="pulpo3" />
+                        </div>
+                    </div>
+                </div>                
+                
+            </section>
+        </article>
+
+
+    </div>
+
+    <div class="botones">
+        <input type="checkbox" id="btn-mas">
+        <div class="redes">
+            <a href="https://www.facebook.com/biomarina24/" class="fa fa-facebook"></a>
+            <a href="https://www.youtube.com/watch?v=Ezqwh52li70" class="fa fa-youtube"></a>
+            <a href="https://twitter.com/shreketc" class="fa fa-twitter"></a>
+            <a href="https://www.pinterest.com.mx/mariafigueroaga/shrek/" class="fa fa-pinterest"></a>
+        </div>
+        <div class="btn-mas">
+            <label for="btn-mas" class="fa fa-user"></label>
+        </div>
+    </div>
+
+    <div class="container-footer">	
+
+        <footer>
+
+			<address>
+				<strong>Defensores Marinos</strong><br>
+				Av Instituto Politécnico Nacional 2580, La Laguna Ticoman, Gustavo A. Madero, 07340 Ciudad de México, CDMX<br>
+				Telefono: 55 2847 4323
+                <p></p>
+                <p></p>
+			</address>
+
+
+            <div class="logo-footer">
+                <img src="img/logo-da.png" alt="">
+            </div>
+
+
+            <hr>
+
+
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

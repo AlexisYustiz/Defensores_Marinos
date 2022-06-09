@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Defensores Marinos</title>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+    
+       <link rel="icon" href="./img/logo-da.png">  
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/donaciones.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+
+<body>
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Defensores<b>Marinos</b></h1>
+
+            
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="blog.html"><i class="fas fa-file-alt"></i>Blog</a></li>
+                        <li><a href="galeria.html"> <i class="fa-solid fa-photo-film"></i>Galería</a></li>                        
+                        <li class="menu-selected"><a href="donaciones.html" class="text-menu-selected"> 
+                            <i class="fa-solid fa-handshake-angle"></i></i>Donaciones</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div id="ctn-icon-search">  
+                <i class="fas fa-search" id="icon-search"></i>  <!--Se agrega un icono de busqueda desde Font Awesome-->
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>  <!--Se agrega un contenedor que incluirá la barra de busqueda-->
+        </div>
+    </header>
+
+    <div id="ctn-bars-search">
+        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+    </div>
+
+    <ul id="box-search">
+        <li><a href="#Acerca de Nosotros"><i class="fas fa-search"></i>Acerca de Nosotros</a></li>
+        <li><a href="#Misión"><i class="fas fa-search"></i>Misión</a></li>
+        <li><a href="#Visión"><i class="fas fa-search"></i>Visión</a></li>
+        <li><a href="#Delfin"><i class="fas fa-search"></i>Delfin</a></li>
+        <li><a href="#Vaquita"><i class="fas fa-search"></i>Vaquita</a></li>
+        <li><a href="#galeria"><i class="fas fa-search"></i>Galería</a></li>
+        <li><a href="blog.html"><i class="fas fa-search"></i>Blog</a></li>
+    </ul>
+
+    <div id="cover-ctn-search"></div>
+
+    <div class="container-all" id="move-content">
+
+    
+        <div class="article-container-cover">
+            <div class="container-info-cover">
+
+        </div>
+    <div class="container-content">
+        <article class="bg-paypal">
+        <section class="st-paypal">
+            <div class="donacion">
+                <h1>Donaciones</h1>
+                <p>
+                <h3>Si gustas realizar una donación  para que está página dedicada 
+                    a la apreciación por estas increibles criaturas continue
+                    existiendo lo agradecería bastante. 
+
+                </h3>
+                </p><br>
+            </div>
+            <div id="smart-button-container">
+                <div style="text-align: center"><label for="description">Descripción: </label><input type="text"
+                        name="descriptionInput" id="description" maxlength="127" value=""></div>
+                <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a
+                    description</p>
+                <div style="text-align: center"><label for="amount">Donación: </label><input name="amountInput"
+                        type="number" id="amount" value=""><span> MXN</span></div>
+                <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price
+                </p>
+                <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input
+                        name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
+                <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an
+                    Invoice ID</p>
+                <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+            </div>
+            <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=MXN"
+                data-sdk-integration-source="button-factory"></script>
+            <script>
+                function initPayPalButton() {
+                    var description = document.querySelector('#smart-button-container #description');
+                    var amount = document.querySelector('#smart-button-container #amount');
+                    var descriptionError = document.querySelector('#smart-button-container #descriptionError');
+                    var priceError = document.querySelector('#smart-button-container #priceLabelError');
+                    var invoiceid = document.querySelector('#smart-button-container #invoiceid');
+                    var invoiceidError = document.querySelector('#smart-button-container #invoiceidError');
+                    var invoiceidDiv = document.querySelector('#smart-button-container #invoiceidDiv');
+
+                    var elArr = [description, amount];
+
+                    if (invoiceidDiv.firstChild.innerHTML.length > 1) {
+                        invoiceidDiv.style.display = "block";
+                    }
+
+                    var purchase_units = [{ "amount": { "currency_code": "MXN", "value": 1, "breakdown": { "item_total": { "currency_code": "MXN", "value": 1 } } }, "items": [{ "name": "item name", "unit_amount": { "currency_code": "MXN", "value": 1 }, "quantity": "1", "category": "DONATION" }] }]
+
+                    function validate(event) {
+                        return event.value.length > 0;
+                    }
+
+                    paypal.Buttons({
+                        style: {
+                            color: 'gold',
+                            shape: 'pill',
+                            label: 'donate',
+                            layout: 'vertical',
+
+                        },
+
+                        onInit: function (data, actions) {
+                            actions.disable();
+
+                            if (invoiceidDiv.style.display === "block") {
+                                elArr.push(invoiceid);
+                            }
+
+                            elArr.forEach(function (item) {
+                                item.addEventListener('keyup', function (event) {
+                                    var result = elArr.every(validate);
+                                    if (result) {
+                                        actions.enable();
+                                    } else {
+                                        actions.disable();
+                                    }
+                                });
+                            });
+                        },
+
+                        onClick: function () {
+                            if (description.value.length < 1) {
+                                descriptionError.style.visibility = "visible";
+                            } else {
+                                descriptionError.style.visibility = "hidden";
+                            }
+
+                            if (amount.value.length < 1) {
+                                priceError.style.visibility = "visible";
+                            } else {
+                                priceError.style.visibility = "hidden";
+                            }
+
+                            if (invoiceid.value.length < 1 && invoiceidDiv.style.display === "block") {
+                                invoiceidError.style.visibility = "visible";
+                            } else {
+                                invoiceidError.style.visibility = "hidden";
+                            }
+
+                            purchase_units[0].description = description.value;
+                            purchase_units[0].amount.value = amount.value;
+                            purchase_units[0].amount.breakdown.item_total.value = amount.value;
+                            purchase_units[0].items[0].unit_amount.value = amount.value;
+
+                            if (invoiceid.value !== '') {
+                                purchase_units[0].invoice_id = invoiceid.value;
+                            }
+                        },
+
+                        createOrder: function (data, actions) {
+                            return actions.order.create({
+                                purchase_units: purchase_units,
+                            });
+                        },
+
+                        onApprove: function (data, actions) {
+                            return actions.order.capture().then(function (orderData) {
+
+                                // Full available details
+                                console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+                                // Show a success message within this page, e.g.
+                                const element = document.getElementById('paypal-button-container');
+                                element.innerHTML = '';
+                                element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+                                // Or go to another URL:  actions.redirect('thank_you.html');
+
+                            });
+                        },
+
+                        onError: function (err) {
+                            console.log(err);
+                        }
+                    }).render('#paypal-button-container');
+                }
+                initPayPalButton();
+            </script>
+        </section>
+
+    </article>
+    </div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+<div class="container-footer">	
+
+    <footer>
+
+        <address>
+            <strong>Defensores Marinos</strong><br>
+            Av Instituto Politécnico Nacional 2580, La Laguna Ticoman, Gustavo A. Madero, 07340 Ciudad de México, CDMX<br>
+            Telefono: 55 2847 4323
+            <p></p>
+            <p></p>
+        </address>
+
+
+        <div class="logo-footer">
+            <img src="img/logo-da.png" alt="">
+        </div>
+
+        <div class="redes-footer">
+            <a href="https://www.facebook.com/WWF"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g icon-redes-footer"></i></a>
+            <a href="https://www.instagram.com/wwf_mexico/?hl=es"><i class="fab fa-instagram icon-redes-footer"></i></a>
+        </div>
+
+        <hr>
+
+
+    </footer>
+
+
+</html>
